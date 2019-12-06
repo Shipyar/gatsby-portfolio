@@ -165,8 +165,7 @@ const StyledDrawerList = styled.ul`
 const StyledDrawerItem = styled.li`
     list-style: none;
     font-size: calc(2em + 4vw);
-    font-family: 'Trirong', serif;
-    font-weight: 600;
+    font-weight: 700;
     -webkit-font-smoothing: antialiased;
     line-height: 2em;
     & a {

@@ -49,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: ${colors.white};
-    font-family:  sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     padding: 0;
     margin: 0;

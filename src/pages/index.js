@@ -15,14 +15,10 @@ const IndexPage = () => (
         subheading="Highly proficient in fully responsive design and a strong passion for clean, maintainable code that scales.">
         <Code 
           lines={[
-            'welcome to my website',
-            'a bit about me',
-            'i\'m passionate about learning',
-            'i love to code ❤️',
-            'i love to run 👟',
-            'i enjoy helping others',
-            'staying physically active',
-            'exploring the world',
+            '<Welcome',
+            '   intrests={[ \'running\', \'cooking\' ]}',
+            '   favourites={[ \'react\', \'redux\' ,\'styled-components\' ]}',
+            '/>',
           ]}
         />
       </Hero>

@@ -6,7 +6,6 @@ const StyledHero = styled.section`
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  font-family: 'Trirong', serif;
   font-size: 2rem;
   color: ${props => props.theme.colors.first};
   letter-spacing: 2px;

@@ -27,6 +27,7 @@ const StyledSnippetContent = styled.div`
 
 const StyledSnippetCode = styled.pre`
     color: ${props => props.theme.colors.lightBlack};
+    font-weight: 300;
     font-size: 12px;
     letter-spacing: 1px;
     line-height: 24px;
