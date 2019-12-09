@@ -21,6 +21,7 @@ const IndexPage = () => (
             '/>',
           ]}
         />
+        <div></div>
       </Hero>
     </Container>
   </Layout>

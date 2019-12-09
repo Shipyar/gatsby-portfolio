@@ -29,7 +29,7 @@ const StyledBurger = styled.a`
       left: 24px;
       width: 8px;
       height: 2px;
-      background: black;
+      background: ${props => props.theme.colors.text.heading};
       transition: width 0.125s ease-in-out, background 0.25s linear, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.125s linear 0.5s;
     }
 `;

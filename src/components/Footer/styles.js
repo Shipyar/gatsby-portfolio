@@ -7,6 +7,7 @@ const StyledFooter = styled.div`
   text-align: center;
   transition: all 0.25s linear;
   bottom: 0;
+  color: ${props => props.theme.colors.text.paragraph};
 `;
 
 const StyledCopyright = styled.div`

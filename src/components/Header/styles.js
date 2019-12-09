@@ -37,7 +37,7 @@ const StyledNavItem = styled.li`
   display: flex;
   justify-content: center;
   position: relative;
-  color: ${props => props.theme.colors.black};
+  color: ${props => props.theme.text.heading};
   letter-spacing: 1px;
   padding: 1rem;
   cursor: pointer;
@@ -79,7 +79,7 @@ const StyledNavList = styled.ul`
           content: "";
           visibility: visible;
           transform: scaleX(.5);
-          color: ${props => props.theme.colors.black};
+          color: ${props => props.theme.text.heading};
           position: absolute;
           width: 100%;
           height: 1px;

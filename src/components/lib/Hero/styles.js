@@ -15,7 +15,7 @@ const StyledHeroHeading = styled.h1`
   text-align: left;
   margin: 1rem;
   padding: 0 1rem;
-  color: ${props => props.theme.colors.scheme.first};
+  color: ${props => props.theme.colors.text.heading};
   font-size: 48px;
 `;
 
@@ -23,7 +23,7 @@ const StyledHeroSubheading = styled.h2`
   text-align: left;
   margin: 1rem;
   padding: 0 1rem;
-  color: ${props => props.theme.colors.scheme.first};
+  color: ${props => props.theme.colors.text.heading};
 `;
 
 const StyledHeroChildren = styled.div`

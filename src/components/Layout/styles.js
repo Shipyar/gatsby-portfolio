@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 
-const colors = {
+const light = {
+  background: '#fefefe',
   black: '#1f222e',
   lightBlack: 'rgba(31, 34, 46, 0.75)',
   grey: '#cacacc',
@@ -15,6 +16,40 @@ const colors = {
       third: '#c7ecee',
       fourth: '#dff9fb',
   },
+  text: {
+    heading: '#535c68',
+    paragraph: '#535c68',
+  },
+  code: {
+    background: '#fefefe',
+    text: '#535c68',
+  }
+};
+
+const darkTheme = {
+  background: '#535c68',
+  black: '#1f222e',
+  lightBlack: 'rgba(31, 34, 46, 0.75)',
+  grey: '#cacacc',
+  white: '#fefefe',
+  yellow: '#ffeaa7',
+  blue: '#92c5f8',
+  red: '#faa1bc',
+  green: '#80dad3',
+  scheme: {
+    first: '#535c68',
+    second: '#95afc0',
+    third: '#c7ecee',
+    fourth: '#dff9fb',
+  },
+  text: {
+    heading: '#fefefe',
+    paragraph: '#fff',
+  },
+  code: {
+    background: '#000',
+    text: '#fefefe',
+  }
 };
 
 const effects = {
@@ -48,7 +83,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    background-color: ${colors.white};
+    background-color: ${props => props.theme.colors.background};
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     padding: 0;
@@ -58,7 +93,7 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: ${colors.black};
+    color: ${light.black};
   }
   pre {
       font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -67,7 +102,7 @@ const GlobalStyles = createGlobalStyle`
       line-height: 17px;
       margin: 0;
       white-space: pre;
-      color: ${colors.white};
+      color: ${light.white};
   }
   .bold {
       font-weight: 600;
@@ -96,15 +131,16 @@ const GlobalStyles = createGlobalStyle`
       }
   }
   ::selection {
-    color: ${colors.white};
-    background: ${colors.lightBlack};
+    color: ${light.white};
+    background: ${light.lightBlack};
   }
 `;
 
 export {
   GlobalStyles,
   breakpoints,
-  colors,
+  light,
+  darkTheme,
   effects,
   mediaQuery,
 };

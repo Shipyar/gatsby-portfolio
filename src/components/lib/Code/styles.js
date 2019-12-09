@@ -8,10 +8,10 @@ const StyledSnippet = styled.div`
   width: 100%;
   margin: 1rem;
   border-radius: ${props => props.theme.effects.radius};
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.code.background};
   box-shadow: ${props => props.theme.effects.shadow};
   transition: all 0.25s ease !important;
-  background: ${props => props.theme.colors.white};
+  background: ${props => props.theme.colors.code.background};
   min-width: 400px;
   ${props => props.theme.mediaQuery.phone`
     min-width: auto;
@@ -26,7 +26,7 @@ const StyledSnippetContent = styled.div`
 `;
 
 const StyledSnippetCode = styled.pre`
-    color: ${props => props.theme.colors.lightBlack};
+    color: ${props => props.theme.colors.code.text};
     font-weight: 300;
     font-size: 12px;
     letter-spacing: 1px;
