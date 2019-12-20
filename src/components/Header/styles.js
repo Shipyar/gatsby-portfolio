@@ -29,7 +29,6 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   & i {
     cursor: pointer;
-    padding: .4rem;
   }
 `;
 
@@ -37,33 +36,11 @@ const StyledNavItem = styled.li`
   display: flex;
   justify-content: center;
   position: relative;
-  color: ${props => props.theme.text.heading};
+  color: ${props => props.theme.colors.text.heading};
   letter-spacing: 1px;
   padding: 1rem;
   cursor: pointer;
   white-space: nowrap;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: ${props => props.theme.colors.black};
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.15s ease-in-out 0s;
-    transition: all 0.15s ease-in-out 0s;
-  }
-  &:hover:before, &:focus:before {
-    visibility: visible;
-    -webkit-transform: scaleX(.5);
-    transform: scaleX(.5);
-  }
-  &:hover, &:focus {
-    color: ${props => props.theme.colors.black};
-  }
 `;
 
 const StyledNavList = styled.ul`
@@ -74,53 +51,8 @@ const StyledNavList = styled.ul`
     & a {
       padding: 10px;
       font-weight: bold;
-      &.active {
-        &:before {
-          content: "";
-          visibility: visible;
-          transform: scaleX(.5);
-          color: ${props => props.theme.text.heading};
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          bottom: 0;
-          left: 0;
-          background-color: #1f222e;
-        }
-      }
     }
   }
-`;
-
-const StyledLogo = styled.a`
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  padding-left: 12px;
-  font-size: 72px;
-  color: ${props => props.theme.colors.black};
-  transition: all ease-in-out 0.35s;
-  opacity: ${props => props.menuOpen ? '0.4' : '1'};
-  transform: ${props => props.menuOpen ? 'scale(0.95)': ''};
-  pointer-events: ${props => props.menuOpen ? 'none' : 'all'};
-  &:after {
-    display: inline-block;
-    content: "Alex Busch";
-    margin-left: 16px;
-    font-size: 14px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: all 0.35s ease-in-out;
-  }
-  &.is-scrolled {
-    &:after {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-  ${props => props.theme.mediaQuery.tablet`
-    font-size: 54px;
-  `}
 `;
 
 const StyledDrawer = styled.div`
@@ -135,16 +67,7 @@ const StyledDrawer = styled.div`
     right: 0;
     bottom: 0;
     transition: transform .25s ease-in-out;
-    transform: ${props => props.menuOpen ? 'translateX(0px)' : 'translateX(1200px)'};
-    &:before {
-      content: "";
-      background-color: ${props => props.theme.colors.scheme.first};
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      clip-path: polygon(0 0, 100% 0, 100% calc(25% - 16vw), 0% 25%);
-    }
-    
+    transform: ${props => props.menuOpen ? 'translateX(0px)' : 'translateX(1200px)'};   
     ${props => props.theme.mediaQuery.phone`
         width: 85%;
     `}
@@ -168,42 +91,15 @@ const StyledDrawerItem = styled.li`
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     line-height: 2em;
-    & a {
-      position: relative;
-      color: ${props => props.theme.colors.black};
-      &:after {
-        content: "";
-        display: block;
-        background: ${props => props.theme.colors.black};
-        height: 0;
-        position: absolute;
-        left: -8px;
-        right: -12px;
-        bottom: -1px;
-        opacity: 0.1;
-        transition: height 0.25s ease, opacity 0.25s ease;
-      }
-      &:hover:after {
-        height: 35%;
-        opacity: 0.15;
-      }
-      &.active {
-        &:after {
-          height: 50%;
-          opacity: 0.15;
-        }
-      }
-    }
 `;
 
 export {
-    StyledHeader,
-    StyledNav,
-    StyledNavItem,
-    StyledNavList,
-    StyledLogo,
-    StyledDrawer,
-    StyledDrawerBackground,
-    StyledDrawerList,
-    StyledDrawerItem,
+  StyledHeader,
+  StyledNav,
+  StyledNavItem,
+  StyledNavList,
+  StyledDrawer,
+  StyledDrawerBackground,
+  StyledDrawerList,
+  StyledDrawerItem,
 }

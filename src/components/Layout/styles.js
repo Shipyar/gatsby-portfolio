@@ -93,7 +93,7 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: ${light.black};
+    color: ${props => props.theme.colors.text.heading};
   }
   pre {
       font-family: Menlo, Monaco, Lucida Console, Liberation Mono,

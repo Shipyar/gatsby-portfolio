@@ -6,6 +6,7 @@ import {
 } from './styles';
 
 import Burger from '../lib/Burger';
+import NavigationLinks from './NavigationLinks';
 
 const Header = () => {
   const { state, setMenuOpen } = useContext(AppContext);
@@ -14,8 +15,9 @@ const Header = () => {
     <StyledHeader>
       <div className="header-container">
         <Link to="/">
-          Home
+          Oliver Abraham
         </Link>
+        {!state.isMobile && <NavigationLinks />}
         {state.isMobile && <Burger onClick={e => setMenuOpen(e)} menuOpen={state.menuOpen} />}
       </div>
     </StyledHeader>
