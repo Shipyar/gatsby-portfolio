@@ -7,6 +7,7 @@ import {
 
 import Burger from '../lib/Burger';
 import NavigationLinks from './NavigationLinks';
+import Drawer from './Drawer';
 
 const Header = () => {
   const { state, setMenuOpen } = useContext(AppContext);
@@ -19,6 +20,7 @@ const Header = () => {
         </Link>
         {!state.isMobile && <NavigationLinks />}
         {state.isMobile && <Burger onClick={e => setMenuOpen(e)} menuOpen={state.menuOpen} />}
+        {state.isMobile && <Drawer menuOpen={state.menuOpen} aria-expanded={state.menuOpen} />}
       </div>
     </StyledHeader>
   );

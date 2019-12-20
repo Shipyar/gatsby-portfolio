@@ -60,7 +60,7 @@ const StyledDrawer = styled.div`
     align-items: center;
     width: 65%;
     height: 100%;
-    background-color: ${props => props.theme.colors.white};
+    background-color: ${props => props.theme.colors.background};
     z-index: 99999;
     box-shadow: ${props => props.theme.effects.shadow};
     position: fixed;

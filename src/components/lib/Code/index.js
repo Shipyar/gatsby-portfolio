@@ -12,11 +12,6 @@ import {
 } from './styles';
 
 function Snippet({ lines }, props) {
-  const renderLines = () => {
-    lines.map((item) => {
-
-    })
-  }
 
   return (
     <StyledSnippet {...props}>
@@ -35,7 +30,9 @@ function Snippet({ lines }, props) {
         </StyledSnippetMenu>
         <StyledSnippetCode>
           {lines.map((item) => (
-            <StyledSnippetLine>
+            <StyledSnippetLine
+              key={item}
+            >
               {item}
             </StyledSnippetLine>
           ))}
