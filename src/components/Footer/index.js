@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightSwitchOff, faLightSwitchOn } from '@fortawesome/pro-light-svg-icons'
 
 import ThemeContext from '../../context/ThemeContext';
 
@@ -14,7 +16,7 @@ const Footer = () => {
       <StyledCiting>
         Hosted on&nbsp;<a href="https://zeit.co/now">Now</a>.
         <button onClick={toggleDark}>
-          {dark ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
+          {dark ? <FontAwesomeIcon icon={faLightSwitchOff} /> : <FontAwesomeIcon icon={faLightSwitchOn} />}
         </button>
       </StyledCiting>
     </StyledFooter>
