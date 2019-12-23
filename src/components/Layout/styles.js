@@ -1,78 +1,79 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle, css } from "styled-components"
 
 const light = {
-  background: '#fefefe',
-  black: '#1f222e',
-  lightBlack: 'rgba(31, 34, 46, 0.75)',
-  grey: '#cacacc',
-  white: '#fefefe',
-  yellow: '#ffeaa7',
-  blue: '#92c5f8',
-  red: '#faa1bc',
-  green: '#80dad3',
+  background: "#fefefe",
+  black: "#1f222e",
+  lightBlack: "rgba(31, 34, 46, 0.75)",
+  grey: "#cacacc",
+  white: "#fefefe",
+  yellow: "#ffeaa7",
+  blue: "#92c5f8",
+  red: "#faa1bc",
+  green: "#80dad3",
   scheme: {
-      first: '#535c68',
-      second: '#95afc0',
-      third: '#c7ecee',
-      fourth: '#dff9fb',
+    first: "#535c68",
+    second: "#95afc0",
+    third: "#c7ecee",
+    fourth: "#dff9fb",
   },
   text: {
-    heading: '#535c68',
-    paragraph: '#535c68',
+    heading: "#535c68",
+    paragraph: "#535c68",
   },
   code: {
-    background: '#fefefe',
-    text: '#535c68',
-  }
-};
+    background: "#fefefe",
+    text: "#535c68",
+  },
+}
 
 const darkTheme = {
-  background: '#535c68',
-  black: '#1f222e',
-  lightBlack: 'rgba(31, 34, 46, 0.75)',
-  grey: '#cacacc',
-  white: '#fefefe',
-  yellow: '#ffeaa7',
-  blue: '#92c5f8',
-  red: '#faa1bc',
-  green: '#80dad3',
+  background: "#535c68",
+  black: "#1f222e",
+  lightBlack: "rgba(31, 34, 46, 0.75)",
+  grey: "#cacacc",
+  white: "#fefefe",
+  yellow: "#ffeaa7",
+  blue: "#92c5f8",
+  red: "#faa1bc",
+  green: "#80dad3",
   scheme: {
-    first: '#535c68',
-    second: '#95afc0',
-    third: '#c7ecee',
-    fourth: '#dff9fb',
+    first: "#535c68",
+    second: "#95afc0",
+    third: "#c7ecee",
+    fourth: "#dff9fb",
   },
   text: {
-    heading: '#fefefe',
-    paragraph: '#fff',
+    heading: "#fefefe",
+    paragraph: "#fff",
   },
   code: {
-    background: '#000',
-    text: '#fefefe',
-  }
-};
+    background: "#000",
+    text: "#fefefe",
+  },
+}
 
 const effects = {
-  hover: 'rgba(31, 34, 46, 0.25)',
-  shadow: '0px 5px 25px 0px rgba(46, 61, 73, 0.2)',
-  shadowHover: '2px 4px 8px 0px rgba(46, 61, 73, 0.2);',
-  radius: '0.275rem',
-};
+  hover: "rgba(31, 34, 46, 0.25)",
+  shadow: "0px 5px 25px 0px rgba(46, 61, 73, 0.2)",
+  shadowHover: "2px 4px 8px 0px rgba(46, 61, 73, 0.2);",
+  radius: "0.275rem",
+}
 
 const breakpoints = {
   desktop: 1080,
   tablet: 768,
   phone: 576,
-};
+}
 
 const mediaQuery = Object.keys(breakpoints).reduce((acc, label) => {
   acc[label] = (...args) => css`
-  @media (max-width: ${breakpoints[label] / 16}em) {
-    ${css(...args)}
-  }`;
+    @media (max-width: ${breakpoints[label] / 16}em) {
+      ${css(...args)}
+    }
+  `
 
-  return acc;
-}, {});
+  return acc
+}, {})
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -85,10 +86,11 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${props => props.theme.colors.background};
     font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
     font-size: 1rem;
     padding: 0;
     margin: 0;
-    overflow: ${props => props.menuOpen ? 'hidden' : 'auto'};
+    overflow: ${props => (props.menuOpen ? "hidden" : "auto")};
     overflow-x: hidden;
   }
   a {
@@ -134,13 +136,6 @@ const GlobalStyles = createGlobalStyle`
     color: ${light.white};
     background: ${light.lightBlack};
   }
-`;
+`
 
-export {
-  GlobalStyles,
-  breakpoints,
-  light,
-  darkTheme,
-  effects,
-  mediaQuery,
-};
+export { GlobalStyles, breakpoints, light, darkTheme, effects, mediaQuery }
