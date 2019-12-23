@@ -1,18 +1,17 @@
-import React from 'react';
+import React from "react"
 import {
-    StyledSnippet,
-    StyledSnippetContent,
-    StyledSnippetHeader,
-    StyledSnippetButtons,
-    StyledSnippetButton,
-    StyledSnippetLine,
-    StyledSnippetMenu,
-    StyledSnippetMenuItem,
-    StyledSnippetCode,
-} from './styles';
+  StyledSnippet,
+  StyledSnippetContent,
+  StyledSnippetHeader,
+  StyledSnippetButtons,
+  StyledSnippetButton,
+  StyledSnippetLine,
+  StyledSnippetMenu,
+  StyledSnippetMenuItem,
+  StyledSnippetCode,
+} from "./styles"
 
 function Snippet({ lines }, props) {
-
   return (
     <StyledSnippet {...props}>
       <StyledSnippetHeader>
@@ -29,12 +28,8 @@ function Snippet({ lines }, props) {
           <StyledSnippetMenuItem></StyledSnippetMenuItem>
         </StyledSnippetMenu>
         <StyledSnippetCode>
-          {lines.map((item) => (
-            <StyledSnippetLine
-              key={item}
-            >
-              {item}
-            </StyledSnippetLine>
+          {lines.map(item => (
+            <StyledSnippetLine key={item}>{item}</StyledSnippetLine>
           ))}
         </StyledSnippetCode>
       </StyledSnippetContent>
@@ -42,4 +37,4 @@ function Snippet({ lines }, props) {
   )
 }
 
-export default Snippet;
+export default Snippet

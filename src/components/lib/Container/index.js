@@ -1,11 +1,8 @@
-import React from 'react';
-import { StyledContainer } from './styles.js';
+import React from "react"
+import { StyledContainer } from "./styles.js"
 
-const Container = ({ children }) =>  (
-  <StyledContainer>
-      {children}
-  </StyledContainer>
-);
+const Container = ({ children }) => (
+  <StyledContainer>{children}</StyledContainer>
+)
 
-
-export default Container;
+export default Container

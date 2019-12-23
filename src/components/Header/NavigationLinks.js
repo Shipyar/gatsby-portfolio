@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react"
 
-import ActiveLink from './ActiveLink';
+import ActiveLink from "./ActiveLink"
 
-import {
-  StyledNav,
-  StyledNavList,
-} from './styles';
+import { StyledNav, StyledNavList } from "./styles"
 
 const NavigationLinks = () => {
   return (
@@ -18,4 +15,4 @@ const NavigationLinks = () => {
   )
 }
 
-export default NavigationLinks;
+export default NavigationLinks

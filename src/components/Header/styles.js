@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const StyledHeader = styled.header`
   position: sticky;
@@ -19,9 +19,9 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: ${props=> props.theme.breakpoints.desktop}px;
+    max-width: ${props => props.theme.breakpoints.desktop}px;
   }
-`;
+`
 
 const StyledNav = styled.nav`
   display: flex;
@@ -30,7 +30,7 @@ const StyledNav = styled.nav`
   & i {
     cursor: pointer;
   }
-`;
+`
 
 const StyledNavItem = styled.li`
   display: flex;
@@ -41,7 +41,7 @@ const StyledNavItem = styled.li`
   padding: 1rem;
   cursor: pointer;
   white-space: nowrap;
-`;
+`
 
 const StyledNavList = styled.ul`
   display: flex;
@@ -53,45 +53,46 @@ const StyledNavList = styled.ul`
       font-weight: bold;
     }
   }
-`;
+`
 
 const StyledDrawer = styled.div`
-    display: flex;
-    align-items: center;
-    width: 65%;
-    height: 100%;
-    background-color: ${props => props.theme.colors.background};
-    z-index: 99999;
-    box-shadow: ${props => props.theme.effects.shadow};
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    transition: transform .25s ease-in-out;
-    transform: ${props => props.menuOpen ? 'translateX(0px)' : 'translateX(1200px)'};   
-    ${props => props.theme.mediaQuery.phone`
+  display: flex;
+  align-items: center;
+  width: 65%;
+  height: 100%;
+  background-color: ${props => props.theme.colors.background};
+  z-index: 99999;
+  box-shadow: ${props => props.theme.effects.shadow};
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transition: transform 0.25s ease-in-out;
+  transform: ${props =>
+    props.menuOpen ? "translateX(0px)" : "translateX(1200px)"};
+  ${props => props.theme.mediaQuery.phone`
         width: 85%;
     `}
-`;
+`
 
 const StyledDrawerBackground = styled.div`
-    position: absolute;
-    min-width: 0;
-    width: 100%;
-    height: 75vh;
-`;
+  position: absolute;
+  min-width: 0;
+  width: 100%;
+  height: 75vh;
+`
 
 const StyledDrawerList = styled.ul`
-    display: flex;
-    flex-direction: column;
-`;
+  display: flex;
+  flex-direction: column;
+`
 
 const StyledDrawerItem = styled.li`
-    list-style: none;
-    font-size: calc(2em + 4vw);
-    font-weight: 700;
-    -webkit-font-smoothing: antialiased;
-    line-height: 2em;
-`;
+  list-style: none;
+  font-size: calc(2em + 4vw);
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  line-height: 2em;
+`
 
 export {
   StyledHeader,

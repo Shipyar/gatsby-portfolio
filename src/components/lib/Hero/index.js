@@ -1,26 +1,20 @@
-import React from 'react';
+import React from "react"
 
 import {
   StyledHero,
   StyledHeroHeading,
   StyledHeroSubheading,
   StyledHeroChildren,
-} from './styles';
+} from "./styles"
 
-const Hero = ({ heading, subheading, children}) => {
+const Hero = ({ heading, subheading, children }) => {
   return (
     <StyledHero>
-      <StyledHeroHeading>
-        {heading}
-      </StyledHeroHeading>
-      <StyledHeroSubheading>
-        {subheading}
-      </StyledHeroSubheading>
-      <StyledHeroChildren>
-        {children}
-      </StyledHeroChildren>
+      <StyledHeroHeading>{heading}</StyledHeroHeading>
+      <StyledHeroSubheading>{subheading}</StyledHeroSubheading>
+      <StyledHeroChildren>{children}</StyledHeroChildren>
     </StyledHero>
-  );
+  )
 }
 
-export default Hero;
+export default Hero

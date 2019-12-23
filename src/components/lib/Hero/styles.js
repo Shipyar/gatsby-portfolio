@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const StyledHero = styled.section`
   display: flex;
@@ -9,7 +9,7 @@ const StyledHero = styled.section`
   font-size: 2rem;
   color: ${props => props.theme.colors.first};
   letter-spacing: 2px;
-`;
+`
 
 const StyledHeroHeading = styled.h1`
   text-align: left;
@@ -17,14 +17,14 @@ const StyledHeroHeading = styled.h1`
   padding: 0 1rem;
   color: ${props => props.theme.colors.text.heading};
   font-size: 48px;
-`;
+`
 
 const StyledHeroSubheading = styled.h2`
   text-align: left;
   margin: 1rem;
   padding: 0 1rem;
   color: ${props => props.theme.colors.text.heading};
-`;
+`
 
 const StyledHeroChildren = styled.div`
   display: flex;
@@ -33,11 +33,11 @@ const StyledHeroChildren = styled.div`
   flex-wrap: wrap;
   margin-top: 4rem;
   margin-bottom: 4rem;
-`;
+`
 
 export {
   StyledHero,
   StyledHeroHeading,
   StyledHeroSubheading,
-  StyledHeroChildren
-};
+  StyledHeroChildren,
+}

@@ -1,45 +1,45 @@
-import React, { useState, useEffect, useRef, createContext } from "react";
+import React, { useState, useEffect, useRef, createContext } from "react"
 
 const AppContext = createContext()
 
 const AppProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [width, setWidth] = useState(769);
-  const [height, setHeight] = useState(0);
+  const [isLoading, setIsLoading] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [width, setWidth] = useState(769)
+  const [height, setHeight] = useState(0)
 
-  const ref = useRef(null);
+  const ref = useRef(null)
 
   useEffect(() => {
     const updateWindowDimensions = () => {
-      if(width <= 768) {
-        setIsMobile(true);
+      if (width <= 768) {
+        setIsMobile(true)
       } else {
-        setIsMobile(false);
-        setMenuOpen(false);
+        setIsMobile(false)
+        setMenuOpen(false)
       }
-      setHeight(window.innerHeight);
-      setWidth(window.innerWidth);
+      setHeight(window.innerHeight)
+      setWidth(window.innerWidth)
     }
-    updateWindowDimensions();
+    updateWindowDimensions()
 
-    window.addEventListener('resize', updateWindowDimensions);
+    window.addEventListener("resize", updateWindowDimensions)
 
     return () => {
-      window.removeEventListener('resize', updateWindowDimensions);
+      window.removeEventListener("resize", updateWindowDimensions)
     }
-}, [width]);
+  }, [width])
 
-  const handleLoading = (e) => {
-    e.preventDefault();
+  const handleLoading = e => {
+    e.preventDefault()
     setIsLoading(!isLoading)
-  };
+  }
 
-  const handleMenuClicked = (e) => {
-    e.preventDefault();
+  const handleMenuClicked = e => {
+    e.preventDefault()
     setMenuOpen(!menuOpen)
-  };
+  }
 
   return (
     <AppContext.Provider
@@ -52,8 +52,8 @@ const AppProvider = ({ children }) => {
           height,
           toastRef: ref,
         },
-        setMenuOpen: (e) => handleMenuClicked(e),
-        setIsLoading: (e) => handleLoading(e),
+        setMenuOpen: e => handleMenuClicked(e),
+        setIsLoading: e => handleLoading(e),
       }}
     >
       {children}
@@ -61,7 +61,7 @@ const AppProvider = ({ children }) => {
   )
 }
 
-const AppConsumer = AppContext.Consumer;
+const AppConsumer = AppContext.Consumer
 
-export default AppProvider;
-export { AppConsumer, AppContext };
+export default AppProvider
+export { AppConsumer, AppContext }
