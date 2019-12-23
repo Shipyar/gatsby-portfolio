@@ -11,7 +11,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Container>
       <Hero
-        heading="Lorem"
+        heading="Oliver Abraham"
         subheading="Highly proficient in fully responsive design and a strong passion for clean, maintainable code that scales."
       >
         <Code

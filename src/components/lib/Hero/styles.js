@@ -21,6 +21,7 @@ const StyledHeroHeading = styled.h1`
 
 const StyledHeroSubheading = styled.h2`
   text-align: left;
+  font-weight: 300;
   margin: 1rem;
   padding: 0 1rem;
   color: ${props => props.theme.colors.text.heading};

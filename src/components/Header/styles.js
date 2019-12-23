@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   transition: all 0.25s ease-in;
   width: 100%;
   z-index: 1001;
-  &.is-scrolled {
+  &.scrolled {
     background-color: ${props => props.theme.colors.white};
     box-shadow: ${props => props.theme.effects.shadow};
   }
