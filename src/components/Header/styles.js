@@ -108,6 +108,9 @@ const StyledDrawerBackground = styled.div`
 const StyledDrawerList = styled.ul`
   display: flex;
   flex-direction: column;
+  padding: 0;
+  width: 100%;
+  align-items: center;
 `
 
 const StyledDrawerItem = styled.li`
