@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   width: 100%;
   z-index: 1001;
   &.scrolled {
-    background-color: ${props => props.theme.colors.white};
+    background-color: ${props => props.theme.colors.background};
     box-shadow: ${props => props.theme.effects.shadow};
   }
   ${props => props.theme.mediaQuery.tablet`
@@ -41,6 +41,30 @@ const StyledNavItem = styled.li`
   padding: 1rem;
   cursor: pointer;
   white-space: nowrap;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: ${props => props.theme.colors.text.heading};
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+  }
+  &:hover:before,
+  &:focus:before {
+    visibility: visible;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+  }
+  &:hover,
+  &:focus {
+    color: ${props => props.theme.colors.black};
+  }
 `
 
 const StyledNavList = styled.ul`

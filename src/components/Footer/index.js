@@ -13,13 +13,11 @@ const Footer = () => {
         © {new Date().getFullYear()} Oliver Abraham
       </StyledCopyright>
       <StyledCiting>
-        Website made with React, Gatsby, and Styled Components.
+        Website made with React, Gatsby, and &nbsp;
+        <span onClick={toggleDark}>Styled Components.</span>
       </StyledCiting>
       <StyledCiting>
         Hosted on&nbsp;<a href="https://zeit.co/now">Now</a>.
-        <button onClick={toggleDark}>
-          {dark ? <span>ss</span> : <span>tt</span>}
-        </button>
       </StyledCiting>
     </StyledFooter>
   )

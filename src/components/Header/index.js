@@ -12,7 +12,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   // Scroll handler function
-  const handleWindowScroll = e => {
+  const handleWindowScroll = () => {
     if (window.scrollY > 0) {
       setIsScrolled(true)
     } else {

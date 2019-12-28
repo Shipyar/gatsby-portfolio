@@ -20,6 +20,9 @@ const StyledCiting = styled.div`
   display: flex;
   justify-content: center;
   padding: 1.2rem;
+  & span {
+    cursor: pointer;
+  }
 `
 
 export { StyledFooter, StyledCopyright, StyledCiting }

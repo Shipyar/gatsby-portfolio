@@ -19,6 +19,7 @@ const IndexPage = () => (
             "<Welcome",
             "   intrests={[ 'running', 'cooking' ]}",
             "   favourites={[ 'react', 'redux' ,'styled-components' ]}",
+            "   languages={['javascript', 'python']}",
             "/>",
           ]}
         />
