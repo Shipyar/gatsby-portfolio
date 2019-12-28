@@ -1,16 +1,21 @@
 import React, { useContext } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 import { StyledNavItem, StyledDrawerItem } from "./styles"
 import { AppContext } from "../../context/AppContext"
 
 const ActiveLink = ({ children, href }) => {
-  const { state } = useContext(AppContext)
+  const { state, setMenuOpen } = useContext(AppContext)
+
+  const handleMobileLinkRedirect = e => {
+    setMenuOpen(e)
+    navigate(href)
+  }
 
   if (state.isMobile) {
     return (
       <StyledDrawerItem>
-        <Link to={href}>{children}</Link>
+        <a onClick={e => handleMobileLinkRedirect(e)}>{children}</a>
       </StyledDrawerItem>
     )
   }
