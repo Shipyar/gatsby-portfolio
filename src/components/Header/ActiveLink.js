@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
-import { Link, navigate } from "gatsby"
+import React, { useContext } from 'react'
+import { Link, navigate } from 'gatsby'
 
-import { StyledNavItem, StyledDrawerItem } from "./styles"
-import { AppContext } from "../../context/AppContext"
+import { StyledNavItem, StyledDrawerItem } from './styles'
+import { AppContext } from '../../context/AppContext'
 
 const ActiveLink = ({ children, href }) => {
   const { isMobile, setMenuOpen } = useContext(AppContext)

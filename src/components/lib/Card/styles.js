@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledProjectCard = styled.div`
   position: relative;
@@ -20,4 +20,4 @@ export const StyledProjectCard = styled.div`
     height: 100%;
     margin: 0;
   }
-`;
+`

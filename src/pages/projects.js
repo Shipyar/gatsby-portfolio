@@ -1,20 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
 
-import Layout from "../components/Layout"
-import Container from "../components/lib/Container"
+import Layout from '../components/Layout'
+import Container from '../components/lib/Container'
 import Section from '../components/lib/Section'
 import Grid from '../components/lib/Grid'
-import Hero from '../components/lib/Hero';
-import Card from '../components/lib/Card';
-import SEO from "../components/seo"
+import Hero from '../components/lib/Hero'
+import Card from '../components/lib/Card'
+import SEO from '../components/seo'
 
 const Projects = () => {
   return (
     <Layout>
       <SEO title="Projects" />
       <Container>
-        <Hero 
+        <Hero
           heading="My Projects"
           subheading="Here are some projects I've had the please of working closely on"
         />

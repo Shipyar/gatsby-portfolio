@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react"
-import PropTypes from "prop-types"
+import React, { useContext, useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 
-import { ThemeProvider } from "styled-components"
+import { ThemeProvider } from 'styled-components'
 
-import ThemeContext from "../../context/ThemeContext"
+import ThemeContext from '../../context/ThemeContext'
 
 import {
   GlobalStyles,
@@ -12,10 +12,10 @@ import {
   darkTheme,
   effects,
   mediaQuery,
-} from "./styles"
+} from './styles'
 
-import Header from "../Header"
-import Footer from "../Footer"
+import Header from '../Header'
+import Footer from '../Footer'
 
 const Layout = ({ children }) => {
   const { dark } = useContext(ThemeContext)

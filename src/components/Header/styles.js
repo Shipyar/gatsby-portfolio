@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const StyledHeader = styled.header`
   position: sticky;
@@ -42,7 +42,7 @@ const StyledNavItem = styled.li`
   cursor: pointer;
   white-space: nowrap;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 1px;
@@ -92,7 +92,7 @@ const StyledDrawer = styled.div`
   bottom: 0;
   transition: transform 0.25s ease-in-out;
   transform: ${props =>
-    props.menuOpen ? "translateX(0px)" : "translateX(1200px)"};
+    props.menuOpen ? 'translateX(0px)' : 'translateX(1200px)'};
   ${props => props.theme.mediaQuery.phone`
         width: 85%;
     `}

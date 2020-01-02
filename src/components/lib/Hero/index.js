@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 
 import {
   StyledHero,
   StyledHeroHeading,
   StyledHeroSubheading,
   StyledHeroChildren,
-} from "./styles"
+} from './styles'
 
 const Hero = ({ heading, subheading, children }) => {
   return (

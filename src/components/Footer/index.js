@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
+import React, { useContext } from 'react'
 
-import ThemeContext from "../../context/ThemeContext"
+import ThemeContext from '../../context/ThemeContext'
 
-import { StyledFooter, StyledCopyright, StyledCiting } from "./styles"
+import { StyledFooter, StyledCopyright, StyledCiting } from './styles'
 
 const Footer = () => {
   const { toggleDark } = useContext(ThemeContext)

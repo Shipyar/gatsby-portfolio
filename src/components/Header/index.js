@@ -1,11 +1,11 @@
-import React, { useContext, useState, useEffect, useCallback } from "react"
-import { Link } from "gatsby"
-import { AppContext } from "../../context/AppContext"
-import { StyledHeader } from "./styles"
+import React, { useContext, useState, useEffect, useCallback } from 'react'
+import { Link } from 'gatsby'
+import { AppContext } from '../../context/AppContext'
+import { StyledHeader } from './styles'
 
-import Burger from "../lib/Burger"
-import NavigationLinks from "./NavigationLinks"
-import Drawer from "./Drawer"
+import Burger from '../lib/Burger'
+import NavigationLinks from './NavigationLinks'
+import Drawer from './Drawer'
 
 const Header = () => {
   const { isMobile, menuOpen, setMenuOpen } = useContext(AppContext)
@@ -13,31 +13,29 @@ const Header = () => {
 
   // Scroll handler function
   const handleWindowScroll = useCallback(e => {
-    if(window.scrollY > 0) {
-        setIsScrolled(true);
+    if (window.scrollY > 0) {
+      setIsScrolled(true)
     } else {
-        setIsScrolled(false);
+      setIsScrolled(false)
     }
-  }, []);
+  }, [])
 
   // Event handler to notice when the user scrolls
   useEffect(() => {
-    window.addEventListener("scroll", handleWindowScroll)
+    window.addEventListener('scroll', handleWindowScroll)
 
-    return () => window.removeEventListener("scroll", handleWindowScroll)
+    return () => window.removeEventListener('scroll', handleWindowScroll)
   }, [handleWindowScroll])
 
   return (
-    <StyledHeader className={`${isScrolled ? "scrolled" : ""}`}>
+    <StyledHeader className={`${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <Link to="/">Oliver Abraham</Link>
         {!isMobile && <NavigationLinks />}
         {isMobile && (
           <Burger onClick={e => setMenuOpen(e)} menuOpen={menuOpen} />
         )}
-        {isMobile && (
-          <Drawer menuOpen={menuOpen} aria-expanded={menuOpen} />
-        )}
+        {isMobile && <Drawer menuOpen={menuOpen} aria-expanded={menuOpen} />}
       </div>
     </StyledHeader>
   )

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, createContext } from "react"
+import React, { useState, useEffect, useRef, createContext } from 'react'
 
 const defaultState = {
   isLoading: false,
@@ -32,10 +32,10 @@ const AppProvider = ({ children }) => {
     }
     updateWindowDimensions()
 
-    window.addEventListener("resize", updateWindowDimensions)
+    window.addEventListener('resize', updateWindowDimensions)
 
     return () => {
-      window.removeEventListener("resize", updateWindowDimensions)
+      window.removeEventListener('resize', updateWindowDimensions)
     }
   }, [width])
 
@@ -59,7 +59,7 @@ const AppProvider = ({ children }) => {
         height,
         toastRef: ref,
         setMenuOpen: e => handleMenuClicked(e),
-        setIsLoading: e => handleLoading(e),   
+        setIsLoading: e => handleLoading(e),
       }}
     >
       {children}

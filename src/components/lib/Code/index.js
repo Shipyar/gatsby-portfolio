@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import {
   StyledSnippet,
   StyledSnippetContent,
@@ -9,7 +9,7 @@ import {
   StyledSnippetMenu,
   StyledSnippetMenuItem,
   StyledSnippetCode,
-} from "./styles"
+} from './styles'
 
 function Snippet({ lines }, props) {
   return (

@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import { StyledBurger } from "./styles"
+import { StyledBurger } from './styles'
 
 const Burger = ({ onClick, menuOpen }) => (
   <StyledBurger
@@ -8,7 +8,7 @@ const Burger = ({ onClick, menuOpen }) => (
     menuOpen={menuOpen}
     href="#"
     aria-label="Oliver Abraham"
-    className={`menu${menuOpen ? "-toggle" : ""}`}
+    className={`menu${menuOpen ? '-toggle' : ''}`}
   >
     <div />
     <div />

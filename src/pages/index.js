@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
-import Container from "../components/lib/Container"
-import Hero from "../components/lib/Hero"
-import Code from "../components/lib/Code"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Container from '../components/lib/Container'
+import Hero from '../components/lib/Hero'
+import Code from '../components/lib/Code'
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
@@ -16,11 +16,11 @@ const IndexPage = () => (
       >
         <Code
           lines={[
-            "<Welcome",
+            '<Welcome',
             "   intrests={[ 'running', 'cooking' ]}",
             "   favourites={[ 'react', 'redux' ,'styled-components' ]}",
             "   languages={['javascript', 'python']}",
-            "/>",
+            '/>',
           ]}
         />
         <div></div>

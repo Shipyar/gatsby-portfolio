@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
 // Styled Components
-import { StyledDrawer, StyledDrawerList } from "./styles"
+import { StyledDrawer, StyledDrawerList } from './styles'
 
-import ActiveLink from "./ActiveLink"
+import ActiveLink from './ActiveLink'
 
 const Drawer = ({ menuOpen }) => {
   return (
