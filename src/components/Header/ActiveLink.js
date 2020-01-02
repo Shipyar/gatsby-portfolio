@@ -5,14 +5,14 @@ import { StyledNavItem, StyledDrawerItem } from "./styles"
 import { AppContext } from "../../context/AppContext"
 
 const ActiveLink = ({ children, href }) => {
-  const { state, setMenuOpen } = useContext(AppContext)
+  const { isMobile, setMenuOpen } = useContext(AppContext)
 
   const handleMobileLinkRedirect = e => {
     setMenuOpen(e)
     navigate(href)
   }
 
-  if (state.isMobile) {
+  if (isMobile) {
     return (
       <StyledDrawerItem>
         <a onClick={e => handleMobileLinkRedirect(e)}>{children}</a>

@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useRef, createContext } from "react"
 
-const AppContext = createContext()
+const defaultState = {
+  isLoading: false,
+  menuOpen: false,
+  isMobile: false,
+  width: 0,
+  height: 0,
+}
+
+const AppContext = createContext(defaultState)
 
 const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false)
@@ -44,16 +52,14 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        state: {
-          isLoading,
-          isMobile,
-          menuOpen,
-          width,
-          height,
-          toastRef: ref,
-        },
+        isLoading,
+        isMobile,
+        menuOpen,
+        width,
+        height,
+        toastRef: ref,
         setMenuOpen: e => handleMenuClicked(e),
-        setIsLoading: e => handleLoading(e),
+        setIsLoading: e => handleLoading(e),   
       }}
     >
       {children}

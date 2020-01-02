@@ -8,7 +8,7 @@ import NavigationLinks from "./NavigationLinks"
 import Drawer from "./Drawer"
 
 const Header = () => {
-  const { state, setMenuOpen } = useContext(AppContext)
+  const { isMobile, menuOpen, setMenuOpen } = useContext(AppContext)
   const [isScrolled, setIsScrolled] = useState(false)
 
   // Scroll handler function
@@ -31,12 +31,12 @@ const Header = () => {
     <StyledHeader className={`${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <Link to="/">Oliver Abraham</Link>
-        {!state.isMobile && <NavigationLinks />}
-        {state.isMobile && (
-          <Burger onClick={e => setMenuOpen(e)} menuOpen={state.menuOpen} />
+        {!isMobile && <NavigationLinks />}
+        {isMobile && (
+          <Burger onClick={e => setMenuOpen(e)} menuOpen={menuOpen} />
         )}
-        {state.isMobile && (
-          <Drawer menuOpen={state.menuOpen} aria-expanded={state.menuOpen} />
+        {isMobile && (
+          <Drawer menuOpen={menuOpen} aria-expanded={menuOpen} />
         )}
       </div>
     </StyledHeader>

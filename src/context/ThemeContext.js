@@ -4,6 +4,7 @@ const defaultState = {
   dark: false,
   toggleDark: () => {},
 }
+
 const ThemeContext = React.createContext(defaultState)
 
 const ThemeProvider = ({ children }) => {
