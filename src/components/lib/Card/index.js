@@ -1,9 +1,20 @@
-import React from "react"
+import React from 'react'
 
-import { StyledCard } from "./styles"
+import {
+  StyledProjectCard,
+  StyledCardImage,
+  StyledCardContent,
+} from './styles'
 
-const Card = () => {
-  return <StyledCard></StyledCard>
+
+const Card = ({ src, alt, imageSize, title }) => {
+  console.log(title)
+  return (
+    <StyledProjectCard>
+      <img src={src} alt={alt}/>
+      <h1>{title}</h1>
+    </StyledProjectCard>
+  )
 }
 
 export default Card
