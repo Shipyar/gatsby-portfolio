@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { graphql } from "gatsby"
+
 import Layout from '../components/Layout'
 import Container from '../components/lib/Container'
 import Section from '../components/lib/Section'
@@ -8,7 +10,7 @@ import Hero from '../components/lib/Hero'
 import Card from '../components/lib/Card'
 import SEO from '../components/seo'
 
-const Projects = () => {
+const Projects = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" />
@@ -20,14 +22,14 @@ const Projects = () => {
         <Section>
           <Grid>
             <Card
-              src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              src={data.gulfstream.childImageSharp.fluid}
               alt="test"
               title="Gulfstream"
             />
             <Card
-              src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              src={data.gulfstream.childImageSharp.fluid}
               alt="test"
-              title="Slipstream"
+              title="Gulfstream"
             />
           </Grid>
         </Section>
@@ -37,3 +39,15 @@ const Projects = () => {
 }
 
 export default Projects
+
+export const pageQuery = graphql`
+  query {
+    gulfstream: file(relativePath: { eq: "gulf.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

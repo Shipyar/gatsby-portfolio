@@ -1,11 +1,12 @@
 import React from 'react'
+import Img from "gatsby-image"
 
 import { StyledProjectCard } from './styles'
 
 const Card = ({ src, alt, imageSize, title }) => {
   return (
     <StyledProjectCard>
-      <img src={src} alt={alt} />
+      <Img fluid={src} />
       <h1>{title}</h1>
     </StyledProjectCard>
   )
