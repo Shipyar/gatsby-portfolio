@@ -5,7 +5,7 @@ import ThemeContext from "../../context/ThemeContext"
 import { StyledFooter, StyledCopyright, StyledCiting } from "./styles"
 
 const Footer = () => {
-  const { dark, toggleDark } = useContext(ThemeContext)
+  const { toggleDark } = useContext(ThemeContext)
 
   return (
     <StyledFooter>

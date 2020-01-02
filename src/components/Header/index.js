@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useState, useEffect, useCallback } from "react"
 import { Link } from "gatsby"
 import { AppContext } from "../../context/AppContext"
 import { StyledHeader } from "./styles"
@@ -12,13 +12,13 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   // Scroll handler function
-  const handleWindowScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled(true)
+  const handleWindowScroll = useCallback(e => {
+    if(window.scrollY > 0) {
+        setIsScrolled(true);
     } else {
-      setIsScrolled(false)
+        setIsScrolled(false);
     }
-  }
+  }, []);
 
   // Event handler to notice when the user scrolls
   useEffect(() => {
