@@ -13,7 +13,7 @@ const Drawer = ({ menuOpen, handleClickOutside }) => {
     if (ref.current && !ref.current.contains(e.target)) {
       handleClickOutside(e);
     }
-  }, [handleClickOutside])
+  }, [handleClickOutside, menuOpen])
 
   // Event handler to notice when the user scrolls
   useEffect(() => {
