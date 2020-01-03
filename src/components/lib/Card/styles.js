@@ -5,11 +5,6 @@ export const StyledProjectCard = styled.div`
   flex: 1 0 22rem;
   color: #fff;
   cursor: pointer;
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
   & h1 {
     display: flex;
     justify-content: center;

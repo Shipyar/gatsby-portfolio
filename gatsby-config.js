@@ -3,6 +3,8 @@ module.exports = {
     title: `Oliver Abraham | Portfolio`,
     description: `Portfolio created to show some of the great projects I've worked on`,
     author: `oliver abraham`,
+    url: `https://www.oliverabraham.co.uk`, // no trailing slashes allowed
+    twitterUsername: `@ShipyardOA`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -19,12 +21,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Oliver Abraham`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#fefefe`,
+        theme_color: `#fefefe`,
+        display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },

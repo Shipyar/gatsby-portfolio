@@ -44,7 +44,7 @@ export const pageQuery = graphql`
   query {
     gulfstream: file(relativePath: { eq: "gulf.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 1240) {
           ...GatsbyImageSharpFluid
         }
       }
