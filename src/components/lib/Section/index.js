@@ -1,9 +1,15 @@
 import React from 'react'
 
-import { StyledSection } from './styles'
+import { StyledSection, StyledSectionChildren } from './styles'
 
-const Section = ({ children }) => {
-  return <StyledSection>{children}</StyledSection>
+const Section = ({ children, position }) => {
+  return (
+    <StyledSection>
+      <StyledSectionChildren position={position}>
+        {children}
+      </StyledSectionChildren>
+    </StyledSection> 
+  )
 }
 
 export default Section
