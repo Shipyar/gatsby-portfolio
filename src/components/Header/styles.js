@@ -20,6 +20,14 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     margin: 0 auto;
     max-width: ${props => props.theme.breakpoints.desktop}px;
+    & a {
+      font-size: 2rem;
+      font-weight: 800;
+      padding-left: 1.25rem;
+      & span {
+        font-weight: 300;
+      }
+    }
   }
 `
 

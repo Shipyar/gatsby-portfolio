@@ -28,12 +28,12 @@ const StyledHeroSubheading = styled.h2`
 `
 
 const StyledHeroChildren = styled.div`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  flex-wrap: wrap;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  ${props => props.theme.mediaQuery.phone`
+    grid-template-columns: 1fr;
+  `};
 `
 
 export {

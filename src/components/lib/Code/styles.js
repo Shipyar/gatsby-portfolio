@@ -1,18 +1,14 @@
 import styled from 'styled-components'
 
 const StyledSnippet = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex: ${props => (props.flex ? props.flex : 1)};
-  width: 100%;
+  display: grid;
+  grid-template-rows: 20px 1fr;
   margin: 1rem;
   border-radius: ${props => props.theme.effects.radius};
   background-color: ${props => props.theme.colors.code.background};
   box-shadow: ${props => props.theme.effects.shadow};
   transition: all 0.25s ease !important;
   background: ${props => props.theme.colors.code.background};
-  min-width: 400px;
   ${props => props.theme.mediaQuery.phone`
     min-width: auto;
   `};
@@ -41,10 +37,10 @@ const StyledSnippetCode = styled.pre`
   width: 100%;
   padding: 1.2rem 0.6rem;
   ${props => props.theme.mediaQuery.phone`
-        font-size: 10px;
-        letter-spacing: 0;
-        padding: .8rem .4rem;
-    `};
+    font-size: 10px;
+    letter-spacing: 0;
+    padding: .8rem .4rem;
+  `};
 `
 
 const StyledSnippetMenu = styled.ul`
@@ -102,8 +98,8 @@ const StyledSnippetButtons = styled.div`
   padding-left: 1.8rem;
   overflow: auto;
   ${props => props.theme.mediaQuery.phone`
-        padding-left: 1rem;
-    `};
+    padding-left: 1rem;
+  `};
 `
 
 const StyledSnippetButton = styled.span`
