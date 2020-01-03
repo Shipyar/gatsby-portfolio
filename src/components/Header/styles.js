@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: ${props => props.theme.breakpoints.desktop}px;
+    max-width: 100%;
     & a {
       font-size: 2rem;
       font-weight: 800;
