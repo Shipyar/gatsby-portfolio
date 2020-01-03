@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <StyledHeader className={`${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <Link to="/">O<span>Abraham</span></Link>
+        <Link to="/"><span>abraham</span></Link>
         {!isMobile && <NavigationLinks />}
         {isMobile && (
           <Burger onClick={e => setMenuOpen(e)} menuOpen={menuOpen} />
