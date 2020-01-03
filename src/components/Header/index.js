@@ -24,7 +24,9 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleWindowScroll)
 
-    return () => window.removeEventListener('scroll', handleWindowScroll)
+    return () => {
+      window.removeEventListener('scroll', handleWindowScroll)
+    } 
   }, [handleWindowScroll])
 
   return (
@@ -35,7 +37,7 @@ const Header = () => {
         {isMobile && (
           <Burger onClick={e => setMenuOpen(e)} menuOpen={menuOpen} />
         )}
-        {isMobile && <Drawer menuOpen={menuOpen} aria-expanded={menuOpen} />}
+        {isMobile && <Drawer menuOpen={menuOpen} handleClickOutside={(e) => setMenuOpen(e)} aria-expanded={menuOpen} />}
       </div>
     </StyledHeader>
   )
