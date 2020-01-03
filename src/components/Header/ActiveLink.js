@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, navigate } from 'gatsby'
 
-import { StyledNavItem, StyledDrawerItem } from './styles'
+import { StyledNavItem, StyledDrawerItem, StyledNavButton } from './styles'
 import { AppContext } from '../../context/AppContext'
 
 const ActiveLink = ({ children, href }) => {
@@ -15,7 +15,7 @@ const ActiveLink = ({ children, href }) => {
   if (isMobile) {
     return (
       <StyledDrawerItem>
-        <a onClick={e => handleMobileLinkRedirect(e)}>{children}</a>
+        <StyledNavButton onClick={e => handleMobileLinkRedirect(e)}>{children}</StyledNavButton>
       </StyledDrawerItem>
     )
   }

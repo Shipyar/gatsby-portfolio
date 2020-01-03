@@ -129,6 +129,17 @@ const StyledDrawerItem = styled.li`
   line-height: 2em;
 `
 
+const StyledNavButton = styled.button`
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  color: ${props => props.theme.colors.text.heading};
+`;
+
 export {
   StyledHeader,
   StyledNav,
@@ -138,4 +149,5 @@ export {
   StyledDrawerBackground,
   StyledDrawerList,
   StyledDrawerItem,
+  StyledNavButton,
 }
