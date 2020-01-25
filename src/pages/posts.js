@@ -4,11 +4,10 @@ import Layout from '../components/Layout'
 import Container from '../components/lib/Container'
 import Section from '../components/lib/Section'
 import Grid from '../components/lib/Grid'
-import Hero from '../components/lib/Hero'
 import PostList from '../components/PostList';
 import SEO from '../components/seo'
 
-const Posts = ({ data }) => {
+const Posts = () => {
   return (
     <Layout>
       <SEO
@@ -24,9 +23,7 @@ const Posts = ({ data }) => {
           'blog',
         ]}
       />
-
       <Container>
-        <Hero subheading="My blog posts" />
         <Section>
           <Grid>
             <PostList />

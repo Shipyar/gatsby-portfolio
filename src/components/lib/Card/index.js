@@ -1,16 +1,26 @@
 import React from 'react'
-import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
-import { StyledProjectCard } from './styles'
+import { StyledProjectCard, StyledPostThumbnail, StyledPostContent } from './styles'
 
 const Card = ({ postInfo, src }) => {
   return (
     <StyledProjectCard>
-      <Img fluid={src} alt={'test'} title={postInfo.title}/>
-      <Link to={`/posts/${postInfo.path}`}>
-        {postInfo.title}
-      </Link>
+      <StyledPostThumbnail>
+        <Link to={`/posts/${postInfo.path}`}>
+          <Img fluid={src} alt={postInfo.title} title={postInfo.title} />
+        </Link>
+      </StyledPostThumbnail>
+      <StyledPostContent>
+        <Link to={`/posts/${postInfo.path}`}>
+          <h3>
+            {postInfo.title}
+          </h3>
+        </Link>
+        <p>{postInfo.date}</p>
+        <p>{postInfo.description}</p>
+      </StyledPostContent>
     </StyledProjectCard>
   )
 }

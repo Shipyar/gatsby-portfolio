@@ -4,7 +4,7 @@ export const StyledSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 800px;
   height: auto;
   position: relative;
   margin-right: auto;
@@ -14,9 +14,6 @@ export const StyledSection = styled.section`
   max-width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  ${props => props.theme.mediaQuery.tablet`
-    width: 800px;
-  `}
 `
 
 export const StyledSectionChildren = styled.div`

@@ -30,8 +30,6 @@ const PostList = () => {
     }
   `)
 
-  console.log(data);
-
   return (
     <>
       {data.allMdx.edges.map(({ node }, index) => (
