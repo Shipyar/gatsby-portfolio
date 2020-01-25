@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.div`
   display: grid;
+  position: absolute;
   grid-template-rows: 1fr 1fr 1fr;
   width: 100%;
   text-align: center;
