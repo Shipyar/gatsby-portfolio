@@ -28,7 +28,7 @@ const Drawer = ({ menuOpen, handleClickOutside }) => {
     <StyledDrawer ref={ref} menuOpen={menuOpen}>
       <StyledDrawerList>
         <ActiveLink href="/">Home</ActiveLink>
-        <ActiveLink href="/projects">Projects</ActiveLink>
+        <ActiveLink href="/posts">Posts</ActiveLink>
         <ActiveLink href="/contact">Contact</ActiveLink>
       </StyledDrawerList>
     </StyledDrawer>

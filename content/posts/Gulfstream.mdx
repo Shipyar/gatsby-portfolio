@@ -1,0 +1,46 @@
+---
+date: 2020-01-24
+category: React
+slug: /posts/react-hooks
+path: /react-hooks
+title: React Hooks
+author: Oliver Abraham
+description: A quick deep dive into react hooks and how they work.
+keywords:
+  - react
+  - hooks
+  - useState
+  - useEffect
+  - useReducer
+  - useContext
+  - useCallback
+image: thumbnail.jpg
+---
+
+## Introduction
+
+React hooks were released with React 16.8 and they were created to allow developers to access state, life cycle and other features without class based components.
+
+
+## Hook to manage state
+
+React realsed a hook called useState, this hook returns a tuple the first parameter being the current state and the second is a method that allows us the change the current state of the hook.
+The example below is a simple counter, you can see that the first parameter of use state us `count` which is equal to the current state as I mentioned earlier. 
+
+```js
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```

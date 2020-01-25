@@ -6,22 +6,19 @@ export const StyledSection = styled.section`
   align-items: center;
   width: 100%;
   height: auto;
-  min-height: 400px;
-  margin: 7vh 1rem;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  ${props => props.theme.mediaQuery.tablet`
+    width: 800px;
+  `}
 `
 
 export const StyledSectionChildren = styled.div`
-  display: flex;
-  justify-content: ${props =>
-    (props.position === 'right' && 'flex-end') ||
-    (props.position === 'left' && 'flex-start') ||
-    (props.position === 'center' && 'center')};
-  align-items: center;
-  flex-wrap: wrap;
   width: 100%;
-  min-height: 600px;
-  ${props => props.theme.mediaQuery.tablet`
-    justify-content: center;
-  `};
 `

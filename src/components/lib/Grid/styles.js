@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledGrid = styled.div`
+  grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  grid-gap: 2rem;
+  gap: 3rem;
 `
