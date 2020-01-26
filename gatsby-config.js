@@ -20,11 +20,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/content/posts`
-      }
+        path: `${__dirname}/content/posts`,
+      },
     },
     {
-      resolve: "gatsby-plugin-page-creator",
+      resolve: 'gatsby-plugin-page-creator',
       options: {
         path: `${__dirname}/content/posts`,
       },
@@ -47,7 +47,7 @@ module.exports = {
         background_color: `#fefefe`,
         theme_color: `#fefefe`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/portfolio-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
