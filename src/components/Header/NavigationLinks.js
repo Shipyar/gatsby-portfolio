@@ -9,7 +9,7 @@ const NavigationLinks = () => {
     <StyledNav>
       <StyledNavList>
         <ActiveLink href="/posts">Posts</ActiveLink>
-        <ActiveLink href="/contact">Contact</ActiveLink>
+        <ActiveLink href="/about">About</ActiveLink>
       </StyledNavList>
     </StyledNav>
   )

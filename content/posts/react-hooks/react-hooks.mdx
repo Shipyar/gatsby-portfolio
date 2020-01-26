@@ -14,17 +14,17 @@ keywords:
   - useReducer
   - useContext
   - useCallback
-image: thumbnail.jpg
+image: thumbnail.png
 ---
 
 ## Introduction
 
-React hooks were released with React 16.8 and they were created to allow developers to access state, life cycle and other features without class based components.
+React hooks were released with React 16.8 and they were created to allow developers to access state, life cycle and other features without using class based components.
 
 
-## Hook to manage state
+## useState
 
-React realsed a hook called useState, this hook returns a tuple the first parameter being the current state and the second is a method that allows us the change the current state of the hook.
+This hook returns a tuple the first parameter being the current state and the second a method, allowing you to change the current state of the hook.
 The example below is a simple counter, you can see that the first parameter of use state us `count` which is equal to the current state as I mentioned earlier. 
 
 ```js
@@ -44,3 +44,5 @@ function Example() {
   );
 }
 ```
+
+## useEffect
