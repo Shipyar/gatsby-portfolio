@@ -16,6 +16,7 @@ const StyledAboutPage = styled.div`
   ${props => props.theme.mediaQuery.tablet`
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
+    text-align: center;
   `};
 `
 
@@ -34,6 +35,7 @@ const StyledLinkList = styled.ul`
   display: flex;
   padding: 0;
   list-style: none;
+  justify-content: center;
   transition: all 0.35s ease-in-out;
   & li {
     & a {
