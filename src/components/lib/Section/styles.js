@@ -4,7 +4,7 @@ export const StyledSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  width: 1080px;
   height: auto;
   position: relative;
   margin-right: auto;
