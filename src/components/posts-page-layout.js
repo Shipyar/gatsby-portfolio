@@ -8,6 +8,7 @@ import Section from './lib/Section'
 import Layout from './Layout'
 
 const PostTitle = styled.h1`
+  font-size: 3rem;
   color: ${props => props.theme.colors.text.heading};
   ${props => props.theme.mediaQuery.tablet`
     text-align: center;
