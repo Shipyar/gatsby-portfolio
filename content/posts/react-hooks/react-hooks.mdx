@@ -19,30 +19,121 @@ image: thumbnail.png
 
 ## Introduction
 
-React hooks were released with React 16.8 and they were created to allow developers to access state, life cycle and other features without using class based components.
+React hooks were released with React 16.8 and they were created to allow developers to access state, life cycle and other features without using class based components. React hooks in my opinion provide a clearer more simplistic approach for developers to manage and mutate state in react applications.
 
 
 ## useState
 
-This hook returns a tuple the first parameter being the current state and the second a method, allowing you to change the current state of the hook.
-The example below is a simple counter, you can see that the first parameter of use state us `count` which is equal to the current state as I mentioned earlier. 
+This hook returns a tuple the first parameter being the current state and the second a method, allowing you to change the current state of the hook. React uses array destructuring to make this possible which means we creating two new varaibles returned from the useState function `likes` being the first variable and `setLikes` the second.
+The example below is a simple count of the number of likes, you can see that the first parameter of `useState` is `likes` which is equal to the current state as I mentioned earlier. The second
+parameter of `useState` is setLikes which allows us to change the current value of likes. 
+
+`useState()` accepts one argument this argument is the initial state. We can set the initial state to anything `String`, `Bool`, `Number`, `Array` or an `Object` which is something that differs from the a class based component where it has to be an object.
 
 ```js
 import React, { useState } from 'react';
 
-function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+const Example = () => {
+  const [likes, setLikes] = useState(0);
 
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
+      <p>{likes} likes</p>
+      <button onClick={() => setLikes(likes + 1)}>
+        like
       </button>
     </div>
   );
 }
 ```
 
+> How do I handle multiple states in one component?
+
+React allows you to create as many variables as you would like this allows you to update each state individually making your code a lot more readable. You can also group common state into an array or object to be handled in one place as and when that makes sense.
+
+*Tip! *
+One thing I would point out is that `useState` doesnt merge state similarly to `this.setState` updating a variable will always replace the origional I will show you some alternatives to this later on.
+
+```js
+const [likes, setLikes] = useState(0);
+const [dislikes, setDislikes] = useState(0);
+const [comments, setComments] = useState({});
+```
+
+> How can we merge state like `this.setState`?
+
+If you want to merge state react allows you to make use of the object spread syntax. What we are doing below is combinding the `prevState` with `additionalValues`.
+
+```js
+setLikes(prevState => {
+  ...prevState,
+  additionalValues
+})
+```
+
+If you want to find out more information of how to manage state with functional components take a look at the react docs [useState](https://reactjs.org/docs/hooks-state.html)
+
+
 ## useEffect
+
+Use effect was created to allow access to normal lifecycle methods such as `componentDidMount`, `componentDidUpdate` and `componentWillUnmount` from functional components.
+
+In the example below we we write out to the console the nummber of likes each time the component renders you can see how simple it is for you to access the same `componentDidMount` & `componentDidUpdate`.
+
+```js
+import React, { useState, useEffect } from 'react';
+
+const Example = () => {
+  const [likes, setLikes] =  useState(0);
+
+  useEffect(() => {
+    console.log(`You have ${likes} likes`);
+  })
+
+  return (
+    <div>
+      <p>{likes} likes</p>
+      <button onClick={() => setLikes(likes + 1)}>
+        like
+      </button>
+    </div>
+  );
+}
+```
+> What if we only want or useEffect to be run when a specific value changes?
+
+One problem with the solution above is that the maybe you dont want to log out to the console each time the component is rendered and you only want to display the number on likes in the console when that variable changes.
+
+The simpliest way to do this is to pass in an array of dependacies to the useEffect hook in the example below we only want to log to the console the number of likes when the likes changes, and we only want to log to the console the number of dislikes when that changes. React handles this but doing a comparison between the array passed into the use effect and the next render, for our example if we increased likes we would compare [0] the initial value and [1] the next render which would cause the use effect to run in comparison the dislike use effect would compare `[0] === [0]` which are the same and would not re run that use effect.
+
+One thing to keep in you mind is setting state from inside of a useEffect that depends depends on that state will cause an infinate loop.
+
+```js
+import React, { useState, useEffect } from 'react';
+
+const Example = () => {
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0)
+
+  useEffect(() => {
+    console.log(`You have ${likes} likes`);
+  }, [likes])
+
+  useEffect(() => {
+    console.log(`You have ${dislikes} dislikes`);
+  }, [dislikes])
+
+  return (
+    <div>
+      <p>{likes} likes</p>
+      <button onClick={() => setLikes(likes + 1)}>
+        like
+      </button>
+      <p>{dislikes} dislikes</p>
+      <button onClick={() => setDislikes(dislikes + 1)}>
+        dislike
+      </button>
+    </div>
+  );
+}
+```
