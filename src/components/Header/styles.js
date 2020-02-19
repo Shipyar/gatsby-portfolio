@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1080px;
+    max-width: 90%;
     margin: 0px auto;
     & a {
       font-size: 1.5rem;
