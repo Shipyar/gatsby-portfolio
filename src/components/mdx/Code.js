@@ -1,12 +1,12 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import docco from 'react-syntax-highlighter/dist/esm/styles/hljs/docco';
+import Theme from './Theme';
 
 const Code = ({ children, language, className, ...props }) => (
   <SyntaxHighlighter
     {...props}
-    language={language}
-    style={docco}
+    language={language || (className && className.replace('language-', ''))}
+    style={Theme}
   >
     {children}
   </SyntaxHighlighter>
